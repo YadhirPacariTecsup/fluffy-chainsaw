@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yadhir Pacari | Desarrollador de Software</title>
+<meta name="description" content="Portafolio de Yadhir Pacari, estudiante de Diseño y Desarrollo de Software en Tecsup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+<aside class="sidebar" id="sidebar">
+  <div class="avatar" aria-hidden="true">YP</div>
+  <p class="sidebar-name">Yadhir Pacari</p>
+  <nav>
+    <ul>
+      <li><a href="#inicio" class="active">Inicio</a></li>
+      <li><a href="#sobre">Sobre mí</a></li>
+      <li><a href="#especialidad">Especialidad</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#portafolio">Portafolio</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  <div class="social">
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <a class="cv-btn" href="cv.pdf" download>Descargar CV</a>
+</aside>
+
+<main>
+  <section id="inicio" class="hero">
+    <p class="hero-kicker">Hola, soy</p>
+    <h1>YADHIR<br>PACARI</h1>
+    <p class="hero-role">Estudiante de Diseño y Desarrollo de Software en Tecsup, segundo ciclo. Aprendo creando programas y páginas web que funcionan.</p>
+    <a class="btn" href="#portafolio">Ver mis proyectos</a>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre mí</h2>
+    <p>Soy estudiante del segundo ciclo de Diseño y Desarrollo de Software en Tecsup. Me gusta entender cómo se construye un sistema de principio a fin: desde la base de datos hasta lo que ve el usuario.</p>
+    <p>Hoy practico programación en Java con bases de datos y desarrollo web con HTML, CSS, JavaScript y PHP. Busco mi primera experiencia en proyectos reales.</p>
+  </section>
+
+  <section id="especialidad">
+    <h2>Especialidad</h2>
+    <div class="grid grid-2">
+      <article class="card"><h3>Programación en Java</h3><p>Aplicaciones de consola, clases, controladores y estructuras de control.</p></article>
+      <article class="card"><h3>Bases de datos con JDBC</h3><p>CRUD completo con PreparedStatement y ResultSet.</p></article>
+      <article class="card"><h3>Desarrollo web</h3><p>Páginas responsivas con HTML5, CSS3 y JavaScript.</p></article>
+      <article class="card"><h3>Backend con PHP</h3><p>Formularios con validación y envío de correos.</p></article>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <div class="grid grid-3">
+      <article class="card"><h3>Páginas web</h3><p>Sitios sencillos, rápidos y adaptados a celular.</p></article>
+      <article class="card"><h3>Sistemas CRUD</h3><p>Registro, consulta, edición y eliminación de datos.</p></article>
+      <article class="card"><h3>Formularios</h3><p>Formularios de contacto con validación en PHP.</p></article>
+      <article class="card"><h3>Portafolios</h3><p>Presentación clara de tu trabajo en una sola página.</p></article>
+      <article class="card"><h3>Maquetación</h3><p>De un diseño a HTML y CSS ordenado.</p></article>
+      <article class="card"><h3>Apoyo en prácticas</h3><p>Ayuda con ejercicios de lógica y Java.</p></article>
+    </div>
+  </section>
+
+  <section id="portafolio">
+    <h2>Portafolio</h2>
+    <div class="grid grid-2">
+      <article class="card project">
+        <h3>Pizzería: CRUD en Java con JDBC</h3>
+        <p>Aplicación de consola con menú (Scanner, while y switch) y tres entidades. Incluye la clase Producto y su controlador.</p>
+        <p class="tags"><span>Java</span><span>JDBC</span><span>SQL</span></p>
+      </article>
+      <article class="card project">
+        <h3>Este portafolio</h3>
+        <p>Página personal responsiva con menú lateral, formulario de contacto validado y envío con PHP.</p>
+        <p class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes una consulta o un proyecto? Escríbeme y te respondo pronto.</p>
+    <form id="contactForm" action="contacto.php" method="post" novalidate>
+      <label>Nombre completo *
+        <input type="text" name="nombre" required autocomplete="name">
+      </label>
+      <label>Correo electrónico *
+        <input type="email" name="correo" required autocomplete="email">
+      </label>
+      <label>Teléfono
+        <input type="tel" name="telefono" autocomplete="tel">
+      </label>
+      <label>Consulta *
+        <textarea name="consulta" rows="5" required></textarea>
+      </label>
+      <input type="text" name="web" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Enviar consulta</button>
+      <p id="formMsg" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>© <span id="year">2026</span> Yadhir Pacari. Creado y desarrollado por Yadhir Pacari.</p>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
